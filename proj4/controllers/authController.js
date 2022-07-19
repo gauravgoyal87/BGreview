@@ -8,6 +8,7 @@ const register = async (req,res)=>{
     });
 };
 const login = async (req,res)=>{
+    Auth.findOne(email)
     res.send('login user')
 }
 

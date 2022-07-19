@@ -1,17 +1,15 @@
 import express from 'express'
 const app = express()
-// import mongoose from 'mongoose'
+import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 dotenv.config()
 import { Router } from 'express'
 
 
-// import connectDB from './db/connect.js'
-// import MONGO_URL from './.env'
+import connectDB from './db/connect.js'
 import reviewRouter from './routes/reviewRoutes.js'
 import authRouter from './routes/authRoutes.js'
-import { register} from './controllers/authController.js'
-// const routes = require("./routes")
+
 import notFoundMiddleware from  './middleware/not-found.js'
 import errorHandlerMiddleware from './middleware/error-handler.js'
 
@@ -42,15 +40,15 @@ app.listen(port, () => {
   console.log(`Server is listening on port ${port}...`)
 })
 
-// const start = async () => {
-//     try {
-//       await connectDB(process.env.MONGO_URL)
-//       app.listen(port, () => {
-//         console.log(`Server is listening on port ${port}...`)
-//       })
-//     } catch (error) {
-//       console.log(error)
-//     }
-//   }
+const start = async () => {
+    try {
+      await connectDB(process.env.MONGO_URL)
+      app.listen(port, () => {
+        console.log(`Server is listening on port ${port}...`)
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
   
-//   start()
+  start()
