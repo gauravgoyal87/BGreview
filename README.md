@@ -12,6 +12,7 @@ AN APP TO RECORD YOUR PERSONAL REVIEWS OF BOARSD GAMES
 3. Node
 4. Axios
 5. MongoDB
+6. stylized-components
 
 ## Installation instructions:
 
