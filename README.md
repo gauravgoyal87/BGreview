@@ -24,8 +24,15 @@ deployment link here
 - As a user, I want to able to delete reviews
 
 # Code Snippet
+to run frontend :
 
-type following to run locally
+npm run client
+
+to run backend :
+
+npm run server
+
+type following to run(front end and back end) locally
 
 npm run concurrently --kill-others-on-fail \"npm run server\" \" npm run client\
 
